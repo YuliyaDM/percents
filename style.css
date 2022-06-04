@@ -1,0 +1,224 @@
+:root{
+    --clr: #0aeb82;
+}
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background: #252525;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.percent-show{
+    width: 200px;
+    height: 200px;
+    background: #2c2c2c;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    outline: 12px solid #252525;
+}
+
+svg circle{
+    fill: transparent;
+    stroke: #121212;
+    stroke-width: 4px;
+    transform: translate(30px, 30px);
+}
+
+.ps1 circle:nth-child(2){
+    fill:transparent;
+    stroke-width: 4px;
+    stroke:transparent;
+    stroke-dashoffset: 110px;
+    stroke-dasharray: 440px;
+    position: relative;
+    animation: animateStroke 3s linear forwards;
+    animation-delay: 4s;
+}
+
+.ps2 circle:nth-child(2){
+    fill:transparent;
+    stroke-width: 4px;
+    stroke:transparent;
+    stroke-dashoffset: 220px;
+    stroke-dasharray: 440px;
+    position: relative;
+    animation: animateStroke 3s linear forwards;
+    animation-delay: 4s;
+}
+
+.svg-2{
+    transform: rotate(90deg);
+}
+
+.ps3 circle:nth-child(2){
+    fill:transparent;
+    stroke-width: 4px;
+    stroke:transparent;
+    stroke-dashoffset: 4px;
+    stroke-dasharray: 400px;
+    position: relative;
+    animation: animateStroke 3s linear forwards;
+    animation-delay: 4s;
+}
+
+.circle::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--color);
+    top: calc(50% - 10px);
+    left: calc(50% + 60px);
+    border-radius: 50%;
+}
+
+.circle{
+    width: 140px;
+    height: 140px;
+    background:transparent;
+    position: absolute;
+    top: 30px;
+}
+
+.cir1{
+    animation: circleAnimation 4s linear forwards;
+}
+
+.cir3{
+    stroke-dasharray: 400px;
+    stroke-dashoffset: 4px;
+}
+
+@keyframes circleAnimation {
+    100%{
+        transform: rotate(1080deg)
+    }
+}
+
+@keyframes animateStroke {
+    100%{
+        stroke: var(--color);
+    }
+}
+
+.text{
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    animation: animateText 3s ease 0s forwards;
+    animation-delay: 4s;
+    font-family: cursive;
+    letter-spacing: 2px;
+}
+
+@keyframes animateText {
+    100%{
+        opacity: 1;
+    }
+}
+
+.circle{
+    z-index: 1;
+}
+
+.cir2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    animation: circleTwo 4s linear forwards;
+}
+
+@keyframes circleTwo {
+    100%{
+        transform: rotate(1170deg);
+    }
+}
+
+.text2{
+    width: 100px;
+    height: 50px;
+    transform: rotate(270deg) translate(25px, -45px);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.text{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.svg3{
+    transform: rotate(310deg);
+}
+
+.svg4{
+    transform: rotate(325deg);
+}
+
+.cir3{
+    animation: animateCircle3 4s linear forwards;
+}
+
+.svg4 circle:nth-child(2){
+    animation: animateCircle4 4s linear forwards;
+    animation-delay: 4s;
+    fill: transparent;
+    stroke: transparent;
+    stroke-width: 4px;
+    stroke-dasharray: 550px;
+    stroke-dashoffset: 175px;
+}
+
+@keyframes animateCircle3 {
+    100%{
+        transform: rotate(1395deg);
+    }
+}
+
+@keyframes animateCircle4 {
+    100%{
+        stroke: #0aeb82;
+    }
+}
+
+.text3{
+    transform: rotate(45deg) translate(-54px, 25px);
+}
+
+.cir04::after{
+    top: calc(55% - 60px);
+    left: calc(50% + 45px);
+}
+
+.cir04{
+    animation: animateCircle04 4s linear forwards;
+}
+
+@keyframes animateCircle04 {
+    100%{
+        transform: rotate(1080deg);
+    }
+}
